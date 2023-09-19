@@ -15,4 +15,7 @@ int main(){
         }
         
     }
+    if(n==1){
+        cout<<"1 is neither prime nor composite";
+    }
 }

@@ -7,7 +7,7 @@ int main(){
     cout<<"enter column:";
     cin>>m;
     for(int i=0;i<n;i++){       //row
-       for(int j=0;j<n;j++){      //column
+       for(int j=0;j<m;j++){      //column
             cout<<"* ";
        }
        cout<<endl;

@@ -18,7 +18,7 @@ int main(){
         for(int j=1;j<=n;j++){
             int a=(2*n-1)/2;
             if(j==a){
-                cout<<"*";
+                cout<<"***";
             }
             else{
                 cout<<" ";

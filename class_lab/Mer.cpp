@@ -6,7 +6,6 @@ void Merge(int *a, int low, int high, int mid)
     i = low;
     k = 0;
     j = mid + 1;
- 
     while (i <= mid && j <= high){
         if (a[i] < a[j]){
             temp[k] = a[i];
@@ -44,17 +43,11 @@ void MergeSort(int *a, int low, int high){
 }
 
 int main(){
-    int n, i;
-    cout<<"\nEnter the number of data element to be sorted: ";
-    cin>>n;
-    int arr[n];
-    for(i = 0; i < n; i++){
-        cout<<"Enter element "<<i+1<<": ";
-        cin>>arr[i];
-    }
-    MergeSort(arr, 0, n-1);
+    int arr[]={36,25,40,15,80,52,65};
+    MergeSort(arr, 0, 6);
     cout<<"\nSorted Data ";
-    for (i = 0; i < n; i++)
-    cout<<"->"<<arr[i];
+    for (int i = 0; i < 7; i++)
+    cout<<" "<<arr[i];
     return 0;
+
 }

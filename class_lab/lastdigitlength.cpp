@@ -14,6 +14,7 @@
 using namespace std;
 int main(){
     int arr[]={87,5,4,45,20,47,63};
+    
 
 
 }

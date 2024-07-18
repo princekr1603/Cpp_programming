@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
-
 int main() {
     // Generate a random number between 1 and 100
     srand(time(0));
@@ -30,6 +28,5 @@ int main() {
             cout << "Too high! Try again." << endl;
         }
     }
-
     return 0;
 }

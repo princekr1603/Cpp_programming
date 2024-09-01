@@ -23,5 +23,5 @@ int main(){
         if(marks[i]<35){
             cout<<i<<" ";
         }
-    }
+    }   
 }

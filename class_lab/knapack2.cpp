@@ -1,26 +1,27 @@
-#include<stdio.h>
+// #include<stdio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
     float profit[]={10,5,15,7,6,18,3};
     float weight[]={2,3,5,7,1,4,1};
     int n=sizeof(profit)/sizeof(profit[0]);
     float pw[n];
-    printf("%d\n",n);
-    for (int i=0 ; i<n ; i++)
-    {
+    cout<<n;
+    for (int i=0 ; i<n ; i++){
         pw[i]=(profit[i]/weight[i]);
         printf("%2f\t",pw[i]);
     }
     //sorting
     for (int i = 0; i < n; ++i){
-      for (int j = i + 1; j < n; ++j){
-         if (pw[i] < pw[j]){
-            float a = pw[i], b = profit[i], c = weight[i];
-            pw[i] = pw[j],profit[i] = profit[j],weight[i] = weight[j];
-            pw[j] = a,profit[j] = b,weight[j] = c;  
-         }
-      }
-   }
+        for (int j = i + 1; j < n; ++j){
+            if (pw[i] < pw[j]){
+                float a = pw[i], b = profit[i], c = weight[i];
+                pw[i] = pw[j],profit[i] = profit[j],weight[i] = weight[j];
+                pw[j] = a,profit[j] = b,weight[j] = c;  
+            }
+        }
+    }
     printf("\n");
     for (int i=0 ; i<n ; i++)
     {

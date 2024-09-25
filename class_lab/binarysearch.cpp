@@ -1,27 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int mid;
-int binarysearch(int A[],int low,int upper,int key){
+int main() {
+    int arr[] = {2, 3, 5, 7, 9, 12};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int target = 7;
 
-    if(low<=upper){
-        mid=(low+upper)/2;
+    cout << "Array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";        
+    }
+    cout << endl;
+    int left = 0;
+    int right = n - 1;
+    int result = -1;
 
-        if(key==A[mid]){
-            return mid;
-        }
-        else if(key<A[mid]){
-            return binarysearch(A,low,mid-1,key);
-        }
+    while (left <= right){
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target){
+            result = mid;
+            break;
+        } 
+        else if (arr[mid] < target){
+            left = mid + 1;
+        } 
         else{
-            return binarysearch(A,mid+1,upper,key);
+            right = mid - 1;
         }
     }
-    return-1;
-}
-int main(){
-    int arr[]={2,4,6,7,8,15,24,50};
-    binarysearch(arr,0,7,15);
-    cout<<"index no.is "<<mid;
-}
 
-
+    if (result != -1){
+        cout << "Element " << target << " found at index " << result << endl;
+    } 
+    else{
+        cout << "Element " << target << " not found in the array" << endl;
+    }
+    return 0;
+}

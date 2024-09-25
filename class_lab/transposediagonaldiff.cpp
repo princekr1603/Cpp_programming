@@ -59,6 +59,4 @@ int main(){
             cout<<"differnce is:"<<(l-r)*-1;
         }
     }
-
-
 }

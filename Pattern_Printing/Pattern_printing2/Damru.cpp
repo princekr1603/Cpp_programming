@@ -4,7 +4,7 @@ int main(){
     int n;
     cout<<"enter n: ";
     cin>>n;
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++){//upper part
         for(int j=1;j<=i;j++){
             cout<<"*";
         }
@@ -19,7 +19,7 @@ int main(){
         }
         cout<<endl;
     }
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<=n;i++){//lower part
         for(int j=1;j<=n-i;j++){
             cout<<"*";
         }
